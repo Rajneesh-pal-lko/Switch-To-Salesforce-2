@@ -65,15 +65,15 @@ export default function HomePage() {
   const emailAddress = "mentor@switchtosalesforce.com";
 
   return (
-    <div className="text-slate-900">
+    <div className="overflow-x-hidden text-slate-900">
       <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/70 backdrop-blur-lg">
-        <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-          <a href="#top" className="text-lg font-extrabold tracking-tight">
+        <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+          <a href="#top" className="min-w-0 flex-1 text-lg font-extrabold tracking-tight sm:flex-none">
             Switch To Salesforce
           </a>
           <a
             href="#contact-cta"
-            className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700"
+            className="shrink-0 rounded-full bg-indigo-600 px-3 py-2 text-xs font-semibold whitespace-nowrap text-white transition hover:bg-indigo-700 sm:px-4 sm:text-sm"
           >
             Book Mock Interview
           </a>
@@ -216,7 +216,7 @@ export default function HomePage() {
               Reach out to discuss your goals and book your first mock interview.
             </p>
             <div className="mt-7 grid gap-6 md:grid-cols-2">
-              <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <div className="min-w-0 rounded-2xl border border-slate-200 bg-white p-6">
                 <h3 className="text-lg font-semibold">WhatsApp (Recommended)</h3>
                 <p className="mt-2 text-sm text-slate-600">
                   Fastest way to connect and discuss your prep goals.
@@ -225,23 +225,23 @@ export default function HomePage() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600"
+                  className="mt-5 inline-flex w-full max-w-full items-center justify-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-emerald-600"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Message me on WhatsApp
                 </a>
               </div>
-              <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <div className="min-w-0 rounded-2xl border border-slate-200 bg-white p-6">
                 <h3 className="text-lg font-semibold">Direct Email</h3>
                 <p className="mt-2 text-sm text-slate-600">
                   Prefer email? Contact me directly and share your current prep level.
                 </p>
                 <a
                   href={`mailto:${emailAddress}`}
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                  className="mt-5 inline-flex w-full max-w-full items-center justify-center gap-2 rounded-full bg-slate-900 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-800"
                 >
                   <Mail className="h-4 w-4" />
-                  {emailAddress}
+                  <span className="break-all">{emailAddress}</span>
                 </a>
               </div>
             </div>
