@@ -1,13 +1,14 @@
 :root {
-  --bg: #f8f9fc;
+  --bg: #f6f8fc;
   --surface: #ffffff;
-  --surface-soft: #f3f4ff;
+  --surface-soft: #eef2ff;
   --text: #0f172a;
-  --muted: #475569;
+  --muted: #4b5563;
   --border: #e2e8f0;
-  --primary: #3558f5;
-  --primary-strong: #2d4ad6;
-  --shadow: 0 24px 60px -42px rgba(53, 88, 245, 0.45);
+  --primary: #3446d9;
+  --primary-strong: #2a38b0;
+  --success: #16a34a;
+  --shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.2);
 }
 
 html {
@@ -25,8 +26,8 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--text);
   line-height: 1.65;
-  background: radial-gradient(circle at 12% -8%, #eef1ff 0%, transparent 36%),
-    radial-gradient(circle at 92% 5%, #f3edff 0%, transparent 30%), var(--bg);
+  background: radial-gradient(circle at 12% -8%, #e9eeff 0%, transparent 38%),
+    radial-gradient(circle at 88% 4%, #edeaff 0%, transparent 28%), var(--bg);
 }
 
 .container {
@@ -42,7 +43,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(248, 249, 252, 0.86);
+  background: rgba(246, 248, 252, 0.84);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -77,20 +78,22 @@ body {
 }
 
 .hero {
-  padding-top: 4.5rem;
+  padding-top: 3.5rem;
 }
 
-.hero-grid {
-  display: grid;
-  gap: 1.5rem;
-  align-items: center;
+.hero-shell {
+  border: 1px solid #dce3fb;
+  border-radius: 1.2rem;
+  background: linear-gradient(160deg, #ffffff 0%, #f8faff 55%, #eef2ff 100%);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.25rem;
 }
 
 .hero h1 {
   margin: 0.35rem 0 1rem;
-  font-size: clamp(1.9rem, 6vw, 3.1rem);
+  font-size: clamp(2rem, 6.5vw, 3.3rem);
   line-height: 1.2;
-  max-width: 20ch;
+  max-width: 18ch;
 }
 
 .eyebrow {
@@ -104,82 +107,23 @@ body {
 
 .subtitle {
   color: var(--muted);
-  max-width: 58ch;
+  max-width: 62ch;
 }
 
-.hero-card {
-  border: 1px solid var(--border);
-  background: linear-gradient(170deg, #ffffff 0%, var(--surface-soft) 100%);
-  border-radius: 1rem;
-  padding: 1.35rem;
-  box-shadow: var(--shadow);
+.hero-proof {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.hero-card h2 {
-  margin: 0 0 0.4rem;
-  font-size: 1.1rem;
-}
-
-.hero-card p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.hero-illustration {
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.hero-illustration svg {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
-}
-
-.hero-illustration rect {
-  fill: #eef2ff;
-  stroke: #c7d2fe;
-}
-
-.hero-illustration path {
-  fill: none;
-  stroke: #4f46e5;
-  stroke-width: 5;
-  stroke-linecap: round;
-}
-
-.hero-illustration circle {
-  fill: #6366f1;
-  opacity: 0.9;
-}
-
-.dot {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.dot-a {
-  width: 14px;
-  height: 14px;
-  top: -10px;
-  left: 10px;
-  background: #93c5fd;
-}
-
-.dot-b {
-  width: 10px;
-  height: 10px;
-  top: 30px;
-  right: 34px;
-  background: #c4b5fd;
-}
-
-.dot-c {
-  width: 8px;
-  height: 8px;
-  bottom: 12px;
-  left: 35px;
-  background: #a5b4fc;
+.hero-proof span {
+  font-size: 0.8rem;
+  border: 1px solid #ced8ff;
+  background: #fff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
 }
 
 h2 {
@@ -267,7 +211,7 @@ p {
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: 0.9rem;
-  padding: 1rem;
+  padding: 1.15rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -277,10 +221,10 @@ p {
 }
 
 .feature-card {
-  border: 1px solid var(--border);
-  background: var(--surface);
+  border: 1px solid #dce3fb;
+  background: linear-gradient(170deg, #fff 0%, #f8faff 100%);
   border-radius: 0.9rem;
-  padding: 1rem;
+  padding: 1.15rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -300,10 +244,10 @@ p {
 }
 
 .step-card {
-  border: 1px solid var(--border);
-  background: var(--surface);
+  border: 1px solid #dce3fb;
+  background: linear-gradient(170deg, #fff 0%, #f8faff 100%);
   border-radius: 0.9rem;
-  padding: 1rem;
+  padding: 1.15rem;
   display: flex;
   align-items: center;
   gap: 0.9rem;
@@ -327,11 +271,12 @@ p {
 }
 
 .cta-card {
-  border-radius: 1rem;
+  border-radius: 1.1rem;
   padding: 2rem 1.35rem;
   text-align: center;
-  border: 1px solid var(--border);
-  background: radial-gradient(circle at top, #ececff 0%, #f8f9ff 72%);
+  border: 1px solid #dce3fb;
+  background: radial-gradient(circle at top, #eceeff 0%, #f8f9ff 72%);
+  box-shadow: var(--shadow);
 }
 
 .split-cta {
@@ -341,13 +286,13 @@ p {
 }
 
 .btn-whatsapp {
-  background: #22c55e;
+  background: var(--success);
   color: #fff;
   padding: 0.8rem 1.1rem;
 }
 
 .btn-whatsapp:hover {
-  background: #16a34a;
+  background: #15803d;
   transform: translateY(-2px);
 }
 
@@ -444,8 +389,8 @@ a {
 }
 
 @media (min-width: 720px) {
-  .hero-grid {
-    grid-template-columns: 1.15fr 0.85fr;
+  .hero-shell {
+    padding: 2.5rem 2.2rem;
   }
 
   .problem-grid {
@@ -469,7 +414,6 @@ a {
   }
 
   .card,
-  .hero-card,
   .problem-card,
   .feature-card,
   .step-card {
