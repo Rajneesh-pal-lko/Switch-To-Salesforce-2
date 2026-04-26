@@ -9,7 +9,8 @@ import {
   ClipboardCheck,
   ClipboardList,
   MessagesSquare,
-  MessageCircle
+  MessageCircle,
+  Mail
 } from "lucide-react";
 
 const sectionMotion = {
@@ -59,6 +60,10 @@ const offerCards = [
 ];
 
 export default function HomePage() {
+  const whatsappLink =
+    "https://wa.me/918630541649?text=Hi%2C%20I%20want%20to%20book%20my%20first%20Salesforce%20mock%20interview.";
+  const emailAddress = "mentor@switchtosalesforce.com";
+
   return (
     <div className="text-slate-900">
       <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/70 backdrop-blur-lg">
@@ -94,16 +99,18 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <a
-                href="#contact-cta"
+                href={whatsappLink}
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-indigo-700"
               >
                 Chat on WhatsApp
               </a>
               <a
-                href="#contact-cta"
+                href={`mailto:${emailAddress}`}
                 className="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-indigo-300 hover:text-indigo-700"
               >
-                Send a Message
+                Send an Email
               </a>
             </div>
           </div>
@@ -215,40 +222,28 @@ export default function HomePage() {
                   Fastest way to connect and discuss your prep goals.
                 </p>
                 <a
-                  href="#"
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noreferrer"
                   className="mt-5 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Message me on WhatsApp
                 </a>
               </div>
-              <form className="rounded-2xl border border-slate-200 bg-white p-6">
-                <h3 className="text-lg font-semibold">Send a Message</h3>
-                <div className="mt-4 space-y-3">
-                  <label className="block text-sm font-medium text-slate-700">
-                    Name
-                    <input
-                      type="text"
-                      className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none transition focus:border-indigo-400"
-                      placeholder="Your name"
-                    />
-                  </label>
-                  <label className="block text-sm font-medium text-slate-700">
-                    Email
-                    <input
-                      type="email"
-                      className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none transition focus:border-indigo-400"
-                      placeholder="mentor@switchtosalesforce.com"
-                    />
-                  </label>
-                  <button
-                    type="button"
-                    className="w-full rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
+              <div className="rounded-2xl border border-slate-200 bg-white p-6">
+                <h3 className="text-lg font-semibold">Direct Email</h3>
+                <p className="mt-2 text-sm text-slate-600">
+                  Prefer email? Contact me directly and share your current prep level.
+                </p>
+                <a
+                  href={`mailto:${emailAddress}`}
+                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                >
+                  <Mail className="h-4 w-4" />
+                  {emailAddress}
+                </a>
+              </div>
             </div>
           </div>
         </motion.section>
