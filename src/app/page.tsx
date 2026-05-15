@@ -63,6 +63,7 @@ export default function HomePage() {
   const whatsappLink =
     "https://wa.me/918630541649?text=Hi%2C%20I%20want%20to%20book%20my%20first%20Salesforce%20mock%20interview.";
   const emailAddress = "mentor@switchtosalesforce.com";
+  const blogUrl = "https://blog.switchtosalesforce.com";
 
   return (
     <div className="overflow-x-hidden text-slate-900">
@@ -71,12 +72,23 @@ export default function HomePage() {
           <a href="#top" className="min-w-0 flex-1 text-lg font-extrabold tracking-tight sm:flex-none">
             Switch To Salesforce
           </a>
-          <a
-            href="#contact-cta"
-            className="shrink-0 rounded-full bg-indigo-600 px-3 py-2 text-xs font-semibold whitespace-nowrap text-white transition hover:bg-indigo-700 sm:px-4 sm:text-sm"
-          >
-            Book Mock Interview
-          </a>
+          <div className="flex shrink-0 items-center gap-3 sm:gap-4">
+            <a
+              href={blogUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-semibold text-slate-600 underline-offset-4 transition-colors hover:text-indigo-700 hover:underline sm:text-sm"
+            >
+              Blog
+            </a>
+            <span className="hidden h-4 select-none bg-slate-200 sm:block sm:w-px" aria-hidden />
+            <a
+              href="#contact-cta"
+              className="rounded-full bg-indigo-600 px-3 py-2 text-xs font-semibold whitespace-nowrap text-white transition hover:bg-indigo-700 sm:px-4 sm:text-sm"
+            >
+              Book Mock Interview
+            </a>
+          </div>
         </nav>
       </header>
 
@@ -251,7 +263,20 @@ export default function HomePage() {
 
       <footer className="border-t border-slate-200 bg-white py-6">
         <div className="mx-auto w-full max-w-6xl px-4 text-center text-sm text-slate-500 sm:px-6">
-          Copyright 2026 Switch To Salesforce.
+          <p>
+            Copyright 2026 Switch To Salesforce.
+            <span aria-hidden className="mx-1.5 text-slate-300 sm:mx-2">
+              ·
+            </span>
+            <a
+              href={blogUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-slate-600 underline-offset-4 transition-colors hover:text-indigo-700 hover:underline"
+            >
+              Blog
+            </a>
+          </p>
         </div>
       </footer>
     </div>
