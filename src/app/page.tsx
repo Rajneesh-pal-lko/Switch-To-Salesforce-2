@@ -64,6 +64,7 @@ export default function HomePage() {
     "https://wa.me/918630541649?text=Hi%2C%20I%20want%20to%20book%20my%20first%20Salesforce%20mock%20interview.";
   const emailAddress = "mentor@switchtosalesforce.com";
   const blogUrl = "https://blog.switchtosalesforce.com";
+  const learnUrl = "https://learn.switchtosalesforce.com";
 
   return (
     <div className="overflow-x-hidden text-slate-900">
@@ -80,6 +81,15 @@ export default function HomePage() {
               className="text-xs font-semibold text-slate-600 underline-offset-4 transition-colors hover:text-indigo-700 hover:underline sm:text-sm"
             >
               Blog
+            </a>
+            <span className="hidden h-4 select-none bg-slate-200 sm:block sm:w-px" aria-hidden />
+            <a
+              href={learnUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-semibold text-slate-600 underline-offset-4 transition-colors hover:text-indigo-700 hover:underline sm:text-sm"
+            >
+              Learning Guide
             </a>
             <span className="hidden h-4 select-none bg-slate-200 sm:block sm:w-px" aria-hidden />
             <a
@@ -275,6 +285,17 @@ export default function HomePage() {
               className="font-semibold text-slate-600 underline-offset-4 transition-colors hover:text-indigo-700 hover:underline"
             >
               Blog
+            </a>
+            <span aria-hidden className="mx-1.5 text-slate-300 sm:mx-2">
+              ·
+            </span>
+            <a
+              href={learnUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-slate-600 underline-offset-4 transition-colors hover:text-indigo-700 hover:underline"
+            >
+              Learning Guide
             </a>
           </p>
         </div>
